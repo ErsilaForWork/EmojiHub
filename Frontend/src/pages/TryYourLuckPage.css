@@ -1,0 +1,77 @@
+.try-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.try-wrapper h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.dice-btn {
+  font-size: 4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.dice-btn:hover:not(:disabled) {
+  transform: scale(1.2);
+}
+
+.dice-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.status-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.status-text.error {
+  color: #dc2626;
+}
+
+.lucky-card {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--color-card-bg);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.emoji-display {
+  font-size: 3rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.info-block {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.info-block > div {
+  margin-bottom: 0.5rem;
+}
+
+.info-block .interesting {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.dice-btn.small {
+  margin-top: 1rem;
+  font-size: 2rem;
+}

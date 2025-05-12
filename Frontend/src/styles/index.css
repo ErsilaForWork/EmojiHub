@@ -1,0 +1,135 @@
+:root {
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-accent: #10b981;
+  --color-bg: #f3f4f6;
+  --color-card-bg: #ffffff;
+  --color-text: #111827;
+  --color-border: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background: var(--color-primary);
+  color: white;
+}
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+}
+button.primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.category-nav {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+.category-nav button {
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.category-nav button.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.grid-emojis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.emoji-card {
+  background: var(--color-card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.1s;
+}
+.emoji-card:hover {
+  transform: scale(1.05);
+}
+
+.cart-bar {
+  background: white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cart-bar .item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.cart-bar .item button {
+  background: transparent;
+  border: none;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+.cart-bar .item button:hover {
+  text-decoration: underline;
+}
+
+.emoji-card {
+  cursor: pointer; 
+}
